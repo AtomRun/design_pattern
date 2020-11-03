@@ -9,6 +9,17 @@ package com.leeup.design.priciple.singleresponsibility;
  **/
 public class Test {
     public static void main(String[] args) {
-        Bird bird = new Bird("喜鹊");
+
+        //v1
+        //Bird bird = new Bird();
+        //bird.mainMoveMode("大雁");
+        //bird.mainMoveMode("鸵鸟");//不正确
+
+        //v2
+        FlyBird flyBird = new FlyBird();
+        flyBird.mainMoveMode("大雁");
+
+        WalkBird walkBird = new WalkBird();
+        walkBird.mainMoveMode("鸵鸟");
     }
 }
